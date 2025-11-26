@@ -26,18 +26,18 @@ const Checkbox: React.FC<CheckboxProps> = ({
   const iconProps = { alt: "", width: 17, height: 12 };
 
   return (
-    <div
-      className={`relative w-[25px] h-[25px] cursor-pointer group ${className}`}
+    <button
+      className={`relative w-[25px] h-[25px] cursor-pointer group focus:outline-none ${className}`}
       style={style}
       onClick={handleClick}
     >
       <div className="absolute z-10 -left-[3px] -top-[3px] w-[31px] h-[31px] rounded-[8px] transition-colors opacity-0 border-[3px] border-[#2469f6] group-active:opacity-10" />
 
       <div
-        className={`absolute left-0 top-0 w-[25px] h-[25px] rounded-md border box-border transition-colors ${
+        className={`absolute left-0 top-0 w-[25px] h-[25px] rounded-md transition-colors ${
           checked
             ? "bg-[#2469F6] group-hover:bg-[#5087F8] group-active:bg-[#2469F6]"
-            : "bg-white opacity-60 border-[#CDCDCD] group-hover:opacity-100 group-hover:border-[#BDBDBD]"
+            : "border bg-white opacity-60 border-[#CDCDCD] group-hover:opacity-100 group-hover:border-[#BDBDBD]"
         }`}
       />
 
@@ -68,7 +68,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
           </div>
         </>
       )}
-    </div>
+    </button>
   );
 };
 
