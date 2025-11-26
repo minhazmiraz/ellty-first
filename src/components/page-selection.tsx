@@ -30,7 +30,7 @@ export default function PageSelection({ onDone }: PageSelectionProps) {
       <div className="w-full">
         {pages.map((page, index) => (
           <div key={page}>
-            <label className="flex items-center justify-between pt-[10px] pb-[9px] px-[22px] cursor-pointer">
+            <label className="flex items-center justify-between pt-[10px] pb-[9px] px-[22px] cursor-pointer group">
               <span className="text-[#1F2128] font-['Montserrat'] font-normal text-[14px] leading-[130%]">
                 {page}
               </span>
